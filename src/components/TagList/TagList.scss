@@ -1,0 +1,16 @@
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        padding: 5px clamp(25px, 2vw, 30px);
+        color: white;
+        font-size: clamp(0.625rem, 0.972vw, 0.875rem);
+        border-radius: clamp(5px, 0.694vw, 10px);
+    }
+}

@@ -1,0 +1,71 @@
+[
+	{
+		"id": "cvx7vxca7",
+		"title": "Kaza - Location immobière",
+		"cover": "./src/assets/kasa-01.png",
+		"pictures": [
+			"./src/assets/kasa-01.png",
+			"./src/assets/kasa-02.png",
+			"./src/assets/kasa-03.png"
+		],
+		"description": "Projet d’étude dans le cadre de ma formation avec OpenClassrooms. Conception d'un site de type Single Page Application (SPA) pour la plateforme fictive de location immobilière Kasa. Mise en œuvre de React pour développer l'application en accord avec les maquettes Figma et les normes de qualité requises. Intégration de fonctionnalités telles qu'une galerie d'images à défilement circulaire et des composants collapse.",
+		"date": "Juin 2023",
+		"problem":"Pour garantir des transitions fluides sur les éléments ajoutés dynamiquement au DOM en réponse aux changements de l'état (state), tout en évitant les éventuels problèmes liés à une animation immédiate de ces éléments lors de leur création, une solution consistant à ajouter des classes de manière différée a été mise en place. Les éléments étaient d'abord ajoutés de manière invisible au DOM. Ensuite, après un délai approprié, une classe spécifique était appliquée pour déclencher les animations préalablement définies.",
+		"technologies": [
+			"React",
+			"Saas"
+		],
+		"github": "https://github.com/guillaumedebas/kasa",
+		"skills": [
+			"Initialiser une application avec Create React App",
+			"Développer des éléments de l'interface d'un site web grâce à des composants React",
+			"Configurer la navigation entre les pages de l'application avec React Router"
+		]
+	},
+	{
+		"id": "cgfgdvxa7",
+		"title": "Mon Vieux Grimoire - Notation de livres",
+		"cover": "./src/assets/mvg-01.png",
+		"pictures": [
+			"./src/assets/mvg-01.png",
+			"./src/assets/mvg-02.png",
+			"./src/assets/mvg-03.png"
+		],
+		"description": "Projet d’étude dans le cadre de ma formation avec OpenClassrooms. Mise en place d'une API REST sous Node.js / Express.js pour la gestion complète d'un site fictif de notation de livres. Cela inclut la soumission de nouveaux ouvrages, la gestion des évaluations, les interactions avec la base de données ainsi que la gestion des accès utilisateurs.",
+		"date": "Juillet 2023",
+		"problem":"Pour éviter que les images téléchargées par les utilisateurs ne soient de tailles trop importantes, une solution de compression et de redimensionnement des images a été mise en place. Cette solution utilise la librairie Sharp pour compresser et redimensionner les images à une taille maximale en largeur ou en hauteur, en fonction de la dimension la plus grande, puis les convertir au format WebP.",
+		"technologies": [
+			"Node.js",
+			"Express.js"
+		],
+		"github": "https://github.com/guillaumedebas/MonVieuxGrimoire",
+		"skills": [
+			"Implémenter un modèle logique de données conformément à la réglementation",
+			"Mettre en œuvre des opérations CRUD de manière sécurisée",
+			"Stocker des données de manière sécurisée"
+		]
+	},
+	
+	{
+		"id": "cbfgdfsfxvb",
+		"title": "Kaza - Location immobilière",
+		"cover": "./src/assets/kasa-01.png",
+		"pictures": [
+			"./src/assets/kasa-01.png",
+			"./src/assets/kasa-02.png",
+			"./src/assets/kasa-03.png"
+		],
+		"description": "Projet d’étude dans le cadre de ma formation avec OpenClassrooms. Conception d'un site de type Single Page Application (SPA) pour la plateforme fictive de location immobilière Kasa. Mise en œuvre de React pour développer l'application en accord avec les maquettes Figma et les normes de qualité requises. Intégration de fonctionnalités telles qu'une galerie d'images à défilement circulaire et des composants collapse.",
+		"date": "Juin 2023",
+		"problem":"Problématique de dépendance des composants enfants vis-à-vis des données des composants parents. Pour résoudre cette problématique, j'ai adopté une approche basée sur une organisation méthodique des données, permettant une communication plus fluide et limitant la dépendance excessive aux composants parents.",
+		"technologies": [
+			"React",
+			"Saas"],
+			"github": "https://github.com/guillaumedebas/kasa",
+			"skills": [
+				"Initialiser une application avec Create React App",
+				"Développer des éléments de l'interface d'un site web grâce à des composants React",
+				"Configurer la navigation entre les pages de l'application avec React Router"
+			]
+	}
+]

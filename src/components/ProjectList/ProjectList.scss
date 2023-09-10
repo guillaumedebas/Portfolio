@@ -1,0 +1,22 @@
+.project-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: calc((clamp(0px, 6.944vw, 100px)) * 0.6);
+    grid-row-gap: calc((clamp(0px, 6.944vw, 100px)) * 0.5);
+    padding: calc((clamp(0px, 6.944vw, 100px)) * 0.5);
+    border-radius: 25px;
+    position: relative;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 5.333vw;
+    }
+
+    @media screen and (max-width: 480px) {
+        grid-template-columns: 1fr;
+        background: none;
+        padding: 0;
+        padding-top: calc((clamp(0px, 6.944vw, 100px))* 0.5);
+    }
+}

@@ -1,0 +1,13 @@
+@import './variables';
+
+@mixin section-box {
+    display: flex;
+    background-color: $background-color;
+    border-radius: 10px;
+}
+
+@mixin color-hover {
+    &:hover {
+    color: #a3c2ff;
+    }
+}

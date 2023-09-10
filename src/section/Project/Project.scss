@@ -1,0 +1,15 @@
+@import '../../utils/mixins';
+
+.project-section {
+    @include section-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 1rem;
+  
+    &__title {
+        font-size: 2rem;
+        
+    }
+  }

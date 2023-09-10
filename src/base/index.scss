@@ -1,0 +1,39 @@
+@import '../base/reset.scss';
+@import '@fontsource/roboto/300.css';
+@import '@fontsource/roboto/400.css';
+@import '@fontsource/roboto/500.css';
+@import '@fontsource/roboto/700.css';
+@import '../utils/variables';
+
+
+body {
+  background-color: black;
+  font-family: monospace;
+ 
+  
+}
+
+.main-wrapper {
+    padding-top: clamp(20px, 3.125vw, 45px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100vh;
+    max-width: 1920px;
+    margin: auto;
+  }
+
+Header, main, footer
+  {
+  display: flex;
+  flex-direction: column;
+   margin-right: clamp(0px, 6.944vw, 400px);
+   margin-left: clamp(0px, 6.944vw, 400px);
+   color: $element-color;
+   gap: 10px;
+ }
+
+ Header, footer {
+  margin-bottom: 0;
+ }

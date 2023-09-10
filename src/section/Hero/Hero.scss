@@ -1,0 +1,103 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+
+.hero {
+    @include section-box;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px;
+    align-items: center;
+    gap: 20px;
+
+    &__name {
+        font-size: 1.4rem;
+        width: 16ch;
+        color: $element-color;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid $element-color; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        /* Adjust as needed */
+        animation: 
+        typing 1.5s steps(16, end),
+          blink-caret .7s step-end infinite;
+      }
+      
+      &__job {
+        font-size: 1.4rem;
+        opacity: 0;
+        transform: translateX(30rem);
+        animation: fadeInRight 2s cubic-bezier(0.4, 0.45, 0, 2.13) 1.5s forwards;
+
+      }
+
+    &__avatar {
+        width: 25%;
+        border-radius: 50%;
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+        animation: float 6s ease-in-out infinite;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+        opacity: 0;
+        transform: translateY(3rem);
+        animation: fadeInUp 2s ease 3.5s forwards;
+        letter-spacing: .15em;
+        text-align: center;
+    }
+}
+
+
+
+@keyframes float {
+    0% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+
+    50% {
+        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+        transform: translatey(-20px);
+    }
+
+    100% {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translatey(0px);
+    }
+}
+
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 16ch }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: $element-color }
+  }
+
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

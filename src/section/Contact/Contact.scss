@@ -1,0 +1,192 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+.contact {
+  @include section-box;
+  justify-content: space-around;
+  padding: 50px;
+  gap: 30px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+
+
+  &__message {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    padding-right: 20px;
+
+    &__title {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    &__content {
+      font-size: 16px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex: 1;
+
+
+    &__form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      &__identity {
+        display: flex;
+        gap: 10px;
+      }
+
+      &__email,
+      &__subject,
+      &__message, &__identity__first-name, &__identity__last-name {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        flex: 1;
+
+        &__label {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+
+        &__input,
+        &__textarea {
+          background-color: $element-color;
+          color: $background-color;
+          box-sizing: border-box;
+          padding: 10px;
+          border: 1px solid;
+          border-radius: 10px;
+          font-size: 16px;
+          width: 100%;
+          resize: vertical
+        }
+      }
+
+      &__submit-btn {
+        position: relative;
+        padding: 10px 20px;
+        width: 50%;
+        align-self: flex-end;
+        background-color: $element-color;
+        color: $background-color;
+        border: none;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        height: 50px;
+        width: 300px;
+        background-image: none;
+	      border: none;
+    	  outline: none;
+        //!
+	      background-color: #f56464; 
+        color: white;
+       transition: all 0.2s ease-out;
+
+       &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 160px;
+        height: 40px;
+        background-color: black;
+        z-index: -1;
+        left: calc(50% - 80px);
+        top: 10px;
+        opacity: 0.3;
+        filter: blur(5px);
+        transition: all 0.2s ease-out;
+       }
+
+       &:hover::after {
+        opacity: 0.5;
+        filter: blur(20px);
+        transform: translatey(10px) scalex(1.2);
+      }
+
+      &:active {
+        background-color: #dd4b4b;
+      }
+
+      &:active::after {
+        opacity: 0.3;
+      }
+
+      &.loading::after {
+        width: 40px;
+        border-radius: 100%;
+      }
+
+        
+      }
+
+      .loading {
+       background-color: gray;
+       cursor: wait;
+      }
+
+    }
+  }
+}
+
+.spinner {
+	display: block;
+	width: 34px;
+	height: 34px;
+	position: absolute;
+	top: 8px;
+	left: calc(50% - 17px);
+	background: transparent;
+	box-sizing: border-box;
+	border-top: 4px solid white;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-radius: 100%;
+	animation: spin 0.6s ease-out infinite;
+}
+
+.notification {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 100px;
+  align-items: center;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  &__close {
+    align-self: flex-end;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 20px;
+    font-size: 0.3rem;
+    border: 0;
+    background: url(../../assets/close.svg) center center / 100% 100%;
+    cursor: pointer;
+    opacity: 1;
+    color: transparent;
+  }
+
+&__message {
+ font-weight: 800;
+}
+}
+
+
+
+@keyframes spin {
+	100% {transform: rotate(360deg)}
+}
+
