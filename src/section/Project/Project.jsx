@@ -1,4 +1,5 @@
 import ProjectList from "../../components/ProjectList/ProjectList"
+import Social from "../../components/Social/Social"
 import "./Project.scss"
 
 
@@ -14,6 +15,8 @@ function Project() {
         Projets
       </h2>
       <ProjectList />
+      <p>Retouvez d'autres projets sur mon GitHub : </p>
+      <Social networksToShow={['github']} /> 
       </section>
   )
 }

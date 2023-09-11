@@ -10,7 +10,7 @@ function Footer() {
   return (
     <footer className="footer">
      <p className="footer__text">Réalisé par Guillaume Debas</p>
-     <Social />
+     <Social networksToShow={['github', 'linkedin']} /> 
     </footer>
   )
 }
