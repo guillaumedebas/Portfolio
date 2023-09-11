@@ -54,10 +54,10 @@ function Header() {
       {isMenuOpen && (
         <div className="menu">
           <ul  className={`${isActiveMenu ? "active" : ""}`}>
-            <li key="link1"><a href="#">À propos</a></li>
-            <li key="link2"><a href="#">Technologies</a></li>
-            <li key="link3"><a href="#">Projets</a></li>
-            <li key="link4"><a href="#">Contact</a></li>
+            <li key="link1"><a href="#about">À propos</a></li>
+            <li key="link2"><a href="#technology">Technologies</a></li>
+            <li key="link3"><a href="#project">Projets</a></li>
+            <li key="link4"><a href="#contact">Contact</a></li>
           </ul>
         </div>
       )}

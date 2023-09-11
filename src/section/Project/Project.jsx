@@ -11,7 +11,7 @@ import "./Project.scss"
 function Project() {
   return (
     <section className="project-section">
-     <h2 className="project-section__title">
+     <h2 className="project-section__title" id="project">
         Projets
       </h2>
       <ProjectList />

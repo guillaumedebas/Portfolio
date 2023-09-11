@@ -10,7 +10,7 @@ import "../../assets/guillaume_debas.pdf"
 function About() {
   return (
     <section className="about">
-      <h2 className="about__title">
+      <h2 className="about__title" id="about">
         À propos
       </h2>
       <p className="about__content">

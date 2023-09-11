@@ -14,7 +14,7 @@ import expressjs from "../../assets/expressjs_logo.png"
 
 function Technology() {
   return (
-    <section className="technology">
+    <section className="technology" id="technology">
       <h2 className="technology__title">
         Technologies
       </h2>
