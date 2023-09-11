@@ -6,6 +6,7 @@
   justify-content: space-around;
   padding: 50px;
   gap: 30px;
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -47,7 +48,9 @@
 
       &__email,
       &__subject,
-      &__message, &__identity__first-name, &__identity__last-name {
+      &__message,
+      &__identity__first-name,
+      &__identity__last-name {
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -75,7 +78,6 @@
       &__submit-btn {
         position: relative;
         padding: 10px 20px;
-        width: 50%;
         align-self: flex-end;
         background-color: $element-color;
         color: $background-color;
@@ -87,53 +89,51 @@
         height: 50px;
         width: 300px;
         background-image: none;
-	      border: none;
-    	  outline: none;
-        //!
-	      background-color: $object-color; 
+        border: none;
+        background-color: $object-color;
         color: white;
-       transition: all 0.2s ease-out;
-
-       &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 160px;
-        height: 40px;
-        background-color: black;
-        z-index: -1;
-        left: calc(50% - 80px);
-        top: 10px;
-        opacity: 0.3;
-        filter: blur(5px);
         transition: all 0.2s ease-out;
-       }
 
-       &:hover::after {
-        opacity: 0.5;
-        filter: blur(20px);
-        transform: translatey(10px) scalex(1.2);
-      }
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 160px;
+          height: 40px;
+          background-color: black;
+          z-index: -1;
+          left: calc(50% - 80px);
+          top: 10px;
+          opacity: 0.3;
+          filter: blur(5px);
+          transition: all 0.2s ease-out;
+        }
 
-      &:active {
-        background-color: #dd4b4b;
-      }
+        &:hover::after {
+          opacity: 0.5;
+          filter: blur(20px);
+          transform: translatey(10px) scalex(1.2);
+        }
 
-      &:active::after {
-        opacity: 0.3;
-      }
+        &:active {
+          background-color: #dd4b4b;
+        }
 
-      &.loading::after {
-        width: 40px;
-        border-radius: 100%;
-      }
+        &:active::after {
+          opacity: 0.3;
+        }
 
-        
+        &.loading::after {
+          width: 40px;
+          border-radius: 100%;
+        }
+
+
       }
 
       .loading {
-       background-color: gray;
-       cursor: wait;
+        background-color: gray;
+        cursor: wait;
       }
 
     }
@@ -141,31 +141,34 @@
 }
 
 .spinner {
-	display: block;
-	width: 34px;
-	height: 34px;
-	position: absolute;
-	top: 8px;
-	left: calc(50% - 17px);
-	background: transparent;
-	box-sizing: border-box;
-	border-top: 4px solid white;
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
-	border-bottom: 4px solid transparent;
-	border-radius: 100%;
-	animation: spin 0.6s ease-out infinite;
+  display: block;
+  width: 34px;
+  height: 34px;
+  position: absolute;
+  top: 8px;
+  left: calc(50% - 17px);
+  background: transparent;
+  box-sizing: border-box;
+  border-top: 4px solid white;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-radius: 100%;
+  animation: spin 0.6s ease-out infinite;
 }
 
 .notification {
+  position : fixed;
+  top : 70%;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 30%;
   height: 100px;
   align-items: center;
   border-radius: 10px;
-  color: black;
-  background-color: white;
+  color: $element-color;
+  background-color: $background-color;
+
   &__close {
     align-self: flex-end;
     margin-top: 20px;
@@ -179,14 +182,15 @@
     color: transparent;
   }
 
-&__message {
- font-weight: 800;
-}
+  &__message {
+    font-weight: 800;
+  }
 }
 
 
 
 @keyframes spin {
-	100% {transform: rotate(360deg)}
+  100% {
+    transform: rotate(360deg)
+  }
 }
-

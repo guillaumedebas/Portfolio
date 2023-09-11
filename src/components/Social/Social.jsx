@@ -13,8 +13,16 @@ function Social({ networksToShow }) {
 
   return (
     <div className="social">
-      {showGitHub && <img className="social__logo" src={githubLogo} alt="GitHub" />}
-      {showLinkedIn && <img className="social__logo" src={linkedinLogo} alt="LinkedIn" />}
+      {showGitHub && (
+        <a href="https://github.com/guillaumedebas" target="_blank">
+          <img className="social__logo" src={githubLogo} alt="GitHub" />
+        </a>
+      )}
+      {showLinkedIn && (
+        <a href="https://fr.linkedin.com/in/guillaume-debas-612997150/" target="_blank">
+          <img className="social__logo" src={linkedinLogo} alt="LinkedIn" />
+        </a>
+      )}
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './Contact.scss';
 
@@ -11,6 +11,7 @@ export default function Contact() {
   const [notificationMessage, setNotificationMessage] = useState('');
   const [notificationType, setNotificationType] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [showNotification, setShowNotification] = useState(false);
 
   const onSuccess = message => {
     setNotificationMessage(message);
@@ -22,6 +23,18 @@ export default function Contact() {
     setNotificationType('error');
   };
 
+  useEffect(() => {
+    if (notificationMessage && notificationType === 'success') {
+      setShowNotification(true);
+      const timer = setTimeout(() => {
+        setShowNotification(false);
+        setNotificationMessage('');
+        setNotificationType('');
+      }, 3000); // 3000 milliseconds (3 seconds)
+
+      return () => clearTimeout(timer); // Clear the timer if the component unmounts
+    }
+  }, [notificationMessage, notificationType]);
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -50,7 +63,6 @@ export default function Contact() {
     } finally {
       setIsLoading(false);
     }
-
   };
 
   return (
@@ -61,12 +73,12 @@ export default function Contact() {
           Contactez-moi via ce formulaire
         </p>
 
-        {notificationMessage && (
+        {showNotification && (
           <div className={`notification ${notificationType}`}>
             <button
               className="notification__close"
               aria-label="Fermer la notification"
-              onClick={() => setNotificationMessage('')}
+              onClick={() => setShowNotification(false)}
             >
               Fermer la notification
             </button>
@@ -172,8 +184,6 @@ export default function Contact() {
           >
             {isLoading ? <span className="spinner"></span> : 'Envoyer mon message'}
           </button>
-
-
         </form>
       </div>
     </section>
