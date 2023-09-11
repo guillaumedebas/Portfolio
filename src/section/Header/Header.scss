@@ -62,7 +62,7 @@ header {
 .menu ul {
   margin: 0;
   padding: 0;
-  background: rgba(45, 45, 45, 0.9);
+  background: $background-on-top-color;
  transform:  translateY(-100%);
  transition: transform 1s ease;
  border-radius: 10px;
