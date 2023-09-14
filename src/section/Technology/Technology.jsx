@@ -32,13 +32,13 @@ function Technology() {
           <img src={javascript} alt="Logo JavaScript" className="technology__logos__bubble__img" />
         </div>
         <div title="React" className="technology__logos__bubble">
-          <img src={react} alt="Logo HTML5" className="technology__logos__bubble__img" />
+          <img src={react} alt="Logo React" className="technology__logos__bubble__img" />
         </div>
         <div title="Node.js" className="technology__logos__bubble">
           <img src={nodejs} alt="Logo Node.js" className="technology__logos__bubble__img" />
         </div>
         <div title="Express.js" className="technology__logos__bubble">
-          <img src={expressjs} alt="Logo HTML5" className="technology__logos__bubble__img" />
+          <img src={expressjs} alt="Logo express" className="technology__logos__bubble__img" />
         </div>
       </div>
 

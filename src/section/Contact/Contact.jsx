@@ -100,7 +100,7 @@ export default function Contact() {
               <input
                 className="contact__main__form__identity__first-name__input"
                 type="text"
-                id="first-name"
+                id="FirstName"
                 name="FirstName"
                 required
                 value={FirstName}
@@ -117,7 +117,7 @@ export default function Contact() {
               <input
                 className="contact__main__form__identity__last-name__input"
                 type="text"
-                id="last-name"
+                id="LastName"
                 name="LastName"
                 required
                 value={LastName}
@@ -135,7 +135,7 @@ export default function Contact() {
             <input
               className="contact__main__form__email__input"
               type="email"
-              id="email"
+              id="Email"
               name="Email"
               required
               value={Email}
@@ -152,7 +152,7 @@ export default function Contact() {
             <input
               className="contact__main__form__subject__input"
               type="text"
-              id="subject"
+              id="Subject"
               name="Subject"
               required
               value={Subject}
@@ -168,7 +168,7 @@ export default function Contact() {
             </label>
             <textarea
               className="contact__main__form__message__textarea"
-              id="message"
+              id="Message"
               name="Message"
               rows="4"
               required
