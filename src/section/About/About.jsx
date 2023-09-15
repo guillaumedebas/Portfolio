@@ -1,7 +1,6 @@
 import "./About.scss"
-import Social from "../../components/Social/Social"
+import cv from "../../assets/pdf/guillaume_debas_cv.pdf"
 
-import "../../assets/guillaume_debas.pdf"
 /**
  * About component.
  * Displays the about section of the website.
@@ -23,7 +22,7 @@ function About() {
         Passionné et créatif, je suis animé par la volonté de contribuer activement à la création du monde numérique de demain.
         Si vous recherchez un développeur Web avec ces valeurs, contactez-moi.
       </p>
-      <a href="src/assets/guillaume_debas_cv.pdf" target="_blank" className="about__cv">Télécharger mon CV</a>
+      <a href={cv} target="_blank" className="about__cv">Télécharger mon CV</a>
     </section>
   )
 }

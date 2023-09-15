@@ -1,10 +1,10 @@
 import "./Technology.scss"
-import html5css from "../../assets/html_css_logo.png"
-import saas from "../../assets/sass_logo.svg"
-import javascript from "../../assets/javascript_logo.svg"
-import react from "../../assets/react_logo.svg"
-import nodejs from "../../assets/nodejs_logo.svg"
-import expressjs from "../../assets/expressjs_logo.png"
+import html5css from "../../assets/logos/html_css_logo.webp"
+import saas from "../../assets/logos/sass_logo.svg"
+import javascript from "../../assets/logos/javascript_logo.svg"
+import react from "../../assets/logos/react_logo.svg"
+import nodejs from "../../assets/logos/nodejs_logo.svg"
+import expressjs from "../../assets/logos/expressjs_logo.webp"
 
 
 /**
