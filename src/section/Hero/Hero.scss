@@ -20,14 +20,21 @@
         /* Adjust as needed */
         animation: 
         typing 1.5s steps(16, end),
-          blink-caret .7s step-end infinite;
+          blink-caret .7s step-end forwards;
       }
       
       &__job {
         font-size: 1.4rem;
+        width: 16ch;
+        color: $element-color;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid $element-color; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
         opacity: 0;
-        transform: translateX(30rem);
-        animation: fadeInRight 2s cubic-bezier(0.4, 0.45, 0, 2.13) 1.5s forwards;
+        animation: 
+        typing 1.5s steps(16, end) 1.6s,
+          blink-caret .7s step-end infinite,
+          fadeIn 0s 1.6s forwards; 
 
       }
 
@@ -47,8 +54,8 @@
     &__subtitle {
         font-size: 1rem;
         opacity: 0;
-        transform: translateY(3rem);
-        animation: fadeInUp 2s ease 3.5s forwards;
+        transform: translateX(30rem);
+        animation: fadeInRight 2s cubic-bezier(0.4, 0.45, 0, 2.13)3.5s forwards;
         letter-spacing: .15em;
         text-align: center;
     }
@@ -87,6 +94,11 @@
   }
 
 
+  @keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
 
 @keyframes fadeInUp {
     to {
