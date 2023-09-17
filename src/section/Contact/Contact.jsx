@@ -12,6 +12,7 @@ export default function Contact() {
   const [notificationType, setNotificationType] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const onSuccess = message => {
     setNotificationMessage(message);
@@ -26,10 +27,16 @@ export default function Contact() {
   useEffect(() => {
     if (notificationMessage && notificationType === 'success') {
       setShowNotification(true);
+      setTimeout(() => {
+        setIsOpen(true);
+      }, 500);
       const timer = setTimeout(() => {
-        setShowNotification(false);
-        setNotificationMessage('');
-        setNotificationType('');
+        setIsOpen(false);
+        setTimeout(() => {
+          setShowNotification(false);
+          setNotificationMessage('');
+          setNotificationType('');
+        }, 500);
       }, 3000); // 3000 milliseconds (3 seconds)
 
       return () => clearTimeout(timer); // Clear the timer if the component unmounts
@@ -74,7 +81,7 @@ export default function Contact() {
         </p>
 
         {showNotification && (
-          <div className={`notification ${notificationType}`}>
+          <div className={`notification ${notificationType} ${isOpen ? " open" : ""}`}>
             <button
               className="notification__close"
               aria-label="Fermer la notification"
