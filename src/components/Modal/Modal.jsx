@@ -1,30 +1,25 @@
-import React, { useEffect, useRef } from "react"
-import "./Modal.scss"
+import React, { useEffect, useRef, useState } from "react";
+import "./Modal.scss";
 import BannerGallery from "../BannerGallery/BannerGallery";
 import TagList from "../TagList/TagList";
-
 
 function Modal({ setOpenModal, project }) {
   const modalRef = useRef(null);
   const firstFocusableRef = useRef(null);
   const lastFocusableRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleKeyDown = (e) => {
     if (e.key === "Escape") {
-      setOpenModal(false);
-    } else if (e.key === "Tab") {
-      if (e.shiftKey) {
-        if (document.activeElement === firstFocusableRef.current) {
-          e.preventDefault();
-          lastFocusableRef.current.focus();
-        }
-      } else {
-        if (document.activeElement === lastFocusableRef.current) {
-          e.preventDefault();
-          firstFocusableRef.current.focus();
-        }
-      }
+      closeModal();
     }
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setTimeout(() => {
+      setOpenModal(false);
+    }, 501);
   };
 
   const handlePropagation = (e) => {
@@ -38,28 +33,27 @@ function Modal({ setOpenModal, project }) {
     firstFocusableRef.current = focusableElements[0];
     lastFocusableRef.current = focusableElements[focusableElements.length - 1];
 
-    // Mettre automatiquement le focus sur le premier élément focusable à l'ouverture
     if (firstFocusableRef.current) {
       firstFocusableRef.current.focus();
     }
 
-    // Ajouter la classe pour désactiver le défilement du corps
     document.body.classList.add("body-no-scroll");
 
+    setTimeout(() => {
+      setIsOpen(true);
+    }, 100);
+
+
     return () => {
-      // Supprimer la classe pour réactiver le défilement du corps
       document.body.classList.remove("body-no-scroll");
     };
-
-
   }, []);
 
 
+
   useEffect(() => {
-    // Ajouter le gestionnaire d'événement à la fenêtre quand le composant est monté
     window.addEventListener("keydown", handleKeyDown);
 
-    // Nettoyer le gestionnaire d'événement quand le composant est démonté
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
@@ -75,15 +69,20 @@ function Modal({ setOpenModal, project }) {
 
 
   return (
-    <dialog className="modal" aria-modal="true" onClick={() =>
-      setOpenModal(false)
-    }
+    <dialog
+      className={`modal${isOpen ? " open" : ""}`}
+      aria-modal="true"
+      onClick={() => closeModal()}
       ref={modalRef}
     >
-      <div className="modal__content" onClick={handlePropagation}>
-        <button className="modal__content__close" aria-label="Fermer la modal" onClick={() =>
-          setOpenModal(false)
-        }
+      <div
+        className={`modal__content${isOpen ? " open" : ""}`} // Appliquer la classe fadeOut à modal__content
+        onClick={handlePropagation}
+      >
+        <button
+          className="modal__content__close"
+          aria-label="Fermer la modal"
+          onClick={() => closeModal()}
         >
           Fermer la modale
         </button>

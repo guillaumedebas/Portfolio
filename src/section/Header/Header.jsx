@@ -17,7 +17,7 @@ function Header() {
 
   const toggleMenu = () => {
     setIsActiveMenu(false)
-      setIsActive(false)
+    setIsActive(false)
     setTimeout(() => {
       setIsMenuOpenIcon(!isMenuOpenIcon)
       setIsActive(true)
@@ -53,7 +53,7 @@ function Header() {
 
       {isMenuOpen && (
         <div className="menu">
-          <ul  className={`${isActiveMenu ? "active" : ""}`}>
+          <ul className={`${isActiveMenu ? "active" : ""}`}>
             <li key="link1"><a href="#about">À propos</a></li>
             <li key="link2"><a href="#technology">Technologies</a></li>
             <li key="link3"><a href="#project">Projets</a></li>

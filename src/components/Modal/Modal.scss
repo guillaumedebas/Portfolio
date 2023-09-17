@@ -12,6 +12,15 @@
     z-index: 10;
     top: 0;
     left: 0;
+    opacity: 0;
+    transition: opacity 0.5s, ;
+
+
+    &.open {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
 
     &__content {
         margin-right: clamp(0px, 6.944vw, 400px);
@@ -27,6 +36,15 @@
         padding: 15px;
         color: $element-color;
         z-index: 11;
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s;
+        transform: translateY(3rem);
+
+        &.open {
+            opacity: 1;
+            transform: translateY(0rem);
+            transition: opacity 0.5s, transform 0.5s;
+        }
 
         &__close {
             align-self: flex-end;
@@ -60,7 +78,7 @@
             &__display {
                 display: flex;
                 width: 100%;
-               justify-content: center;
+                justify-content: center;
                 gap: 40px;
 
                 &__element {
@@ -70,10 +88,10 @@
                         font-weight: 800;
                         margin-bottom: 0.5rem;
                         color: rgb(0, 100, 255);
-    
-    
+
+
                     }
-    
+
                     &__content {
                         text-align: justify;
                         margin-bottom: 1.5rem;
@@ -93,7 +111,7 @@
 
 .technologies {
     display: flex;
-    align-items:baseline;
+    align-items: baseline;
     gap: 20px;
 }
 
