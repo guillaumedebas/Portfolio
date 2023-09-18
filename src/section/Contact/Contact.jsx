@@ -79,6 +79,8 @@ export default function Contact() {
         <p className="contact__message__content">
           Contactez-moi via ce formulaire
         </p>
+   
+
 
         {showNotification && (
           <div className={`notification ${notificationType} ${isOpen ? " open" : ""}`}>
@@ -94,105 +96,105 @@ export default function Contact() {
         )}
 
       </div>
-      <div>
-        <form className="contact__main__form" onSubmit={handleSubmit}>
-          <div className="contact__main__form__identity">
-            <div className="contact__main__form__identity__first-name">
-              <label
-                className="contact__main__form__identity__first-name__label"
-                htmlFor="FirstName"
-              >
-                Prénom :
-              </label>
-              <input
-                className="contact__main__form__identity__first-name__input"
-                type="text"
-                id="FirstName"
-                name="FirstName"
-                required
-                value={FirstName}
-                onChange={e => setFirstName(e.target.value)}
-              />
-            </div>
-            <div className="contact__main__form__identity__last-name">
-              <label
-                className="contact__main__form__identity__last-name__label"
-                htmlFor="LastName"
-              >
-                Nom :
-              </label>
-              <input
-                className="contact__main__form__identity__last-name__input"
-                type="text"
-                id="LastName"
-                name="LastName"
-                required
-                value={LastName}
-                onChange={e => setLastName(e.target.value)}
-              />
-            </div>
-          </div>
-          <div className="contact__main__form__email">
+
+      <form className="contact__main__form" onSubmit={handleSubmit}>
+        <div className="contact__main__form__identity">
+          <div className="contact__main__form__identity__first-name">
             <label
-              className="contact__main__form__email__label"
-              htmlFor="Email"
+              className="contact__main__form__identity__first-name__label"
+              htmlFor="FirstName"
             >
-              Email :
+              Prénom :
             </label>
             <input
-              className="contact__main__form__email__input"
-              type="email"
-              id="Email"
-              name="Email"
-              required
-              value={Email}
-              onChange={e => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="contact__main__form__subject">
-            <label
-              className="contact__main__form__subject__label"
-              htmlFor="Subject"
-            >
-              Sujet :
-            </label>
-            <input
-              className="contact__main__form__subject__input"
+              className="contact__main__form__identity__first-name__input"
               type="text"
-              id="Subject"
-              name="Subject"
+              id="FirstName"
+              name="FirstName"
               required
-              value={Subject}
-              onChange={e => setSubject(e.target.value)}
+              value={FirstName}
+              onChange={e => setFirstName(e.target.value)}
             />
           </div>
-          <div className="contact__main__form__message">
+          <div className="contact__main__form__identity__last-name">
             <label
-              className="contact__main__form__message__label"
-              htmlFor="Message"
+              className="contact__main__form__identity__last-name__label"
+              htmlFor="LastName"
             >
-              Votre message :
+              Nom :
             </label>
-            <textarea
-              className="contact__main__form__message__textarea"
-              id="Message"
-              name="Message"
-              rows="4"
+            <input
+              className="contact__main__form__identity__last-name__input"
+              type="text"
+              id="LastName"
+              name="LastName"
               required
-              value={Message}
-              onChange={e => setMessage(e.target.value)}
+              value={LastName}
+              onChange={e => setLastName(e.target.value)}
             />
           </div>
-          <button
-            className={`contact__main__form__submit-btn ${isLoading ? 'loading' : ''}`}
-            type="submit"
-            id="submitButton"
-            disabled={isLoading}
+        </div>
+        <div className="contact__main__form__email">
+          <label
+            className="contact__main__form__email__label"
+            htmlFor="Email"
           >
-            {isLoading ? <span className="spinner"></span> : 'Envoyer mon message'}
-          </button>
-        </form>
-      </div>
+            Email :
+          </label>
+          <input
+            className="contact__main__form__email__input"
+            type="email"
+            id="Email"
+            name="Email"
+            required
+            value={Email}
+            onChange={e => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="contact__main__form__subject">
+          <label
+            className="contact__main__form__subject__label"
+            htmlFor="Subject"
+          >
+            Sujet :
+          </label>
+          <input
+            className="contact__main__form__subject__input"
+            type="text"
+            id="Subject"
+            name="Subject"
+            required
+            value={Subject}
+            onChange={e => setSubject(e.target.value)}
+          />
+        </div>
+        <div className="contact__main__form__message">
+          <label
+            className="contact__main__form__message__label"
+            htmlFor="Message"
+          >
+            Votre message :
+          </label>
+          <textarea
+            className="contact__main__form__message__textarea"
+            id="Message"
+            name="Message"
+            rows="4"
+            required
+            value={Message}
+            onChange={e => setMessage(e.target.value)}
+          />
+        </div>
+        <button
+          className={`contact__main__form__submit-btn ${isLoading ? 'loading' : ''}`}
+          type="submit"
+          id="submitButton"
+          disabled={isLoading}
+        >
+          {isLoading ? <span className="spinner"></span> : 'Envoyer mon message'}
+        </button>
+      </form>
+
     </section>
   );
 }

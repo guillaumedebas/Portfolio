@@ -22,28 +22,6 @@ header {
     width: 12rem;
   }
 }
-  // .menu {
-  //   display: flex;
-
-  //   & li {
-  //     display: block;
-  //     padding: 15px;
-  //   }
-
-  //   & a {
-  //     text-decoration: none;
-  //     margin: 0px;
-  //     color: $element-color;
-  //     font-size: clamp(0.75rem, 1.25vw, 1.125rem);
-
-  //     &:hover {
-  //       text-decoration: none;
-  //       color: $element-color;
-  //     }
-  //   }
-  // }
-
-
   .menu--desktop {
     display: flex;
     @media screen and (max-width: 768px) {
