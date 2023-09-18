@@ -1,5 +1,4 @@
 import "./Hero.scss"
-import photo from "../../assets/photo-guillaume-debas.png"
 import Photo from "../../components/Photo/Photo"
 
 /**

@@ -46,10 +46,10 @@ function Header() {
           <Photo />
         </a>
         <ul className="menu--desktop">
-            <li key="link1"><a href="#about">À propos<span class="underline-effect"></span></a></li>
-            <li key="link2"><a href="#technology">Technologies<span class="underline-effect"></span></a></li>
-            <li key="link3"><a href="#project">Projets<span class="underline-effect"></span></a></li>
-            <li key="link4"><a href="#contact">Contact<span class="underline-effect"></span></a></li>
+            <li key="link1"><a href="#about">À propos<span className="underline-effect"></span></a></li>
+            <li key="link2"><a href="#technology">Technologies<span className="underline-effect"></span></a></li>
+            <li key="link3"><a href="#project">Projets<span className="underline-effect"></span></a></li>
+            <li key="link4"><a href="#contact">Contact<span className="underline-effect"></span></a></li>
           </ul>
         <button className={`${isMenuOpenIcon ? "cross" : "hamburger"} ${isActive ? "active" : ""}`} onClick={toggleMenu}>X</button>
 

@@ -37,7 +37,7 @@ export default function Contact() {
           setNotificationMessage('');
           setNotificationType('');
         }, 500);
-      }, 123500);
+      }, 3500);
 
       return () => clearTimeout(timer); // Clear the timer if the component unmounts
     }

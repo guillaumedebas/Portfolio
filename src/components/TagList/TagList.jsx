@@ -10,13 +10,13 @@ import "./TagList.scss"
 
 function TagList({ tags }) {
   return (
-    <ul className="tag-list">
+    <span className="tag-list">
       {tags.map((tag, id) => (
-        <li key={id} className="tag-list__item">
+        <span key={id} className="tag-list__item">
           {tag}
-        </li>
+        </span>
       ))}
-    </ul>
+    </span>
   )
 }
 
