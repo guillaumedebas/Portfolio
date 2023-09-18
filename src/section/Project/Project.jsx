@@ -14,8 +14,9 @@ function Project() {
      <h2 className="project-section__title" id="project">
         Projets
       </h2>
+      <p className="project-section__text">Cliquez sur les projets pour les découvrir en détail&nbsp;:</p>
       <ProjectList />
-      <p className="project-section__more">Retouvez mes autres projets sur ma page GitHub : </p>
+      <p className="project-section__text">Retrouvez mes autres projets sur ma page GitHub&nbsp;:</p>
       <Social networksToShow={['github']} /> 
       </section>
   )
