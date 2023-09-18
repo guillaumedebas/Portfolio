@@ -9,12 +9,12 @@
   gap: 1.5rem;
 
   &__title {
-      font-size: 1.5rem;
+      font-size: calc(clamp(5rem, 11.111vw, 10rem) / 4.44);
       
   }
 
    &__content {
-      font-size: 1rem;
+      font-size: clamp(0.75rem, 1.25vw, 1.125rem);
       text-align: left;
       max-width: 135ch;
   }
@@ -22,14 +22,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px; 
-    height: 50px; 
+    padding: 1.3rem;
     background-color: $object-color; 
     color: $element-color;
     text-decoration: none;
     border: none;
     border-radius: 10px;
-    font-size: 1rem;
+    font-size: clamp(0.75rem, 1.25vw, 1.125rem);
     cursor: pointer;
     box-sizing: border-box;
     outline: none;

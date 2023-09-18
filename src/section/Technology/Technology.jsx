@@ -19,7 +19,7 @@ function Technology() {
         Technologies
       </h2>
       <p className="technology__description">
-      J'aime donner vie à des idées avec ces technologies :
+      J'aime donner vie à des projets avec ces technologies :
       </p>
       <div className="technology__logos">
         <div title="HTML / CSS" className="technology__logos__bubble">

@@ -11,7 +11,7 @@
     gap: 20px;
 
     &__name {
-        font-size: 1.4rem;
+        font-size: calc(clamp(5rem, 11.111vw, 10rem) / 4.44);
         width: 16ch;
         color: $element-color;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -24,7 +24,7 @@
       }
       
       &__job {
-        font-size: 1.4rem;
+        font-size: calc(clamp(5rem, 11.111vw, 10rem) / 4.44);
         width: 16ch;
         color: $element-color;
         overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -52,7 +52,7 @@
     }
 
     &__subtitle {
-        font-size: 1rem;
+        font-size: calc(clamp(5rem, 11.111vw, 10rem) / 6.66);
         opacity: 0;
         transform: translateX(30rem);
         animation: fadeInRight 2s cubic-bezier(0.4, 0.45, 0, 2.13)3.5s forwards;

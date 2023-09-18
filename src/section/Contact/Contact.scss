@@ -21,12 +21,12 @@
     padding-right: 20px;
 
     &__title {
-      font-size: 24px;
+      font-size: calc(clamp(5rem, 11.111vw, 10rem) / 4.44);
       margin-bottom: 10px;
     }
 
     &__content {
-      font-size: 16px;
+      font-size: clamp(0.75rem, 1.25vw, 1.125rem);
     }
   }
 
@@ -57,7 +57,7 @@
         flex: 1;
 
         &__label {
-          font-size: 18px;
+          font-size: clamp(0.75rem, 1.25vw, 1.125rem);
           margin-bottom: 5px;
         }
 
@@ -69,7 +69,7 @@
           padding: 10px;
           border: 1px solid;
           border-radius: 10px;
-          font-size: 16px;
+          font-size: clamp(0.75rem, 1.25vw, 1.125rem);
           width: 100%;
           resize: vertical
         }
@@ -84,10 +84,11 @@
         border: none;
         box-sizing: border-box;
         border-radius: 10px;
-        font-size: 16px;
+        font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+        height: 3.5rem;
         cursor: pointer;
-        height: 50px;
-        width: 300px;
+        padding: 1.2rem;
+        width: 100%;
         background-image: none;
         border: none;
         background-color: $object-color;
@@ -142,8 +143,8 @@
 
 .spinner {
   display: block;
-  width: 34px;
-  height: 34px;
+  width: 2rem;
+  height: 2rem;
   position: absolute;
   top: 8px;
   left: calc(50% - 17px);
@@ -160,11 +161,13 @@
 .notification {
   position : fixed;
   top : 70%;
+  left: 10%;
   display: flex;
   flex-direction: column;
-  width: 30%;
-  height: 100px;
+  justify-content: flex-start;
   align-items: center;
+  padding: 1%;
+  width: 25%;
   border-radius: 10px;
   color: $element-color;
   background-color: $background-on-top-color;
@@ -173,6 +176,9 @@
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s;
   transform: translateY(3rem);
+  z-index: 20;
+  border: 0.1rem solid $object-color;
+  
 
   &.open {
       opacity: 1;
@@ -182,10 +188,8 @@
 
   &__close {
     align-self: flex-end;
-    margin-top: 20px;
-    margin-right: 20px;
-    width: 20px;
-    font-size: 0.3rem;
+    width: 1.25rem;
+    font-size: 0.5rem;
     border: 0;
     background: url(../../assets/icons/close.svg) center center / 100% 100%;
     cursor: pointer;
@@ -195,6 +199,10 @@
 
   &__message {
     font-weight: 800;
+    margin: 1%;
+    font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+    align-self: center;
+    text-align: center;
   }
 }
 
