@@ -6,15 +6,22 @@ header {
 }
 
 .navbar {
-  @include section-box;
+  display: flex;
+  background-color: rgba(45, 45, 45, 0.99);
   gap: clamp(26px, 3.958vw, 57px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   list-style-type: none;
   align-items: center;
-  padding: 10px;
+  padding: 0.75rem 0 ;
   margin: 0;
+  z-index: 10;
 
 
   &__avatar {
+    margin-left: 10px;
     margin-right: auto;
     display: flex;
     justify-content: flex-start;
@@ -22,51 +29,55 @@ header {
     width: 12rem;
   }
 }
-  .menu--desktop {
-    display: flex;
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-  }
-  
-  .menu--desktop li {
-    list-style: none;
-    margin-right: 2rem;
-    
-  }
-  
-  .menu--desktop li a {
-    display: block;
-    position: relative;
-    font-size: clamp(0.75rem, 1.25vw, 1.125rem);
-    text-decoration: none;
-    color: $element-color;
-    transition: color 1s cubic-bezier(0.34, 1.56, 0.64, 1), background 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-  
-  .menu--desktop li a:hover {
-    color: $object-color;
-  }
-  
-  .menu--desktop .underline-effect {
-    display: block;
-    height: 2px;
-    background: $object-color;
-    width: 0%;
-    transition: width 0.5s ease;
-  }
-  
-  .menu--desktop a:hover .underline-effect {
-    width: 100%;
-  }
 
-  
+.menu--desktop {
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.menu--desktop li {
+  list-style: none;
+  margin-right: 2rem;
+
+}
+
+.menu--desktop li a {
+  display: block;
+  position: relative;
+  font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+  text-decoration: none;
+  color: $element-color;
+  transition: color 1s cubic-bezier(0.34, 1.56, 0.64, 1), background 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.menu--desktop li a:hover {
+  color: $object-color;
+}
+
+.menu--desktop .underline-effect {
+  display: block;
+  height: 2px;
+  background: $object-color;
+  width: 0%;
+  transition: width 0.5s ease;
+}
+
+.menu--desktop a:hover .underline-effect {
+  width: 100%;
+}
+
 
 .hamburger,
 .cross {
   z-index: 10;
   font-size: 3rem;
   border: 0;
+  margin: 0;
+  margin-right: 10px;
+  width: 3rem;
   background: url(../../assets/icons/hamburger.svg) center center / 100% 100%;
   cursor: pointer;
   color: transparent;
@@ -91,21 +102,24 @@ header {
 }
 
 .menu {
-  z-index: 10;
+  z-index: 3;
   font-weight: bold;
-  width: 100%;
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  width: 86%;
   text-align: center;
-  top: 110%;
+  top: 0;
+  margin-top: 85px;
   overflow: hidden;
+
 }
+
+
 
 
 .menu ul {
   margin: 0;
   padding: 0;
-  background: $background-on-top-color;
+  background-color: rgba(45, 45, 45, 0.99);
   transform: translateY(-100%);
   transition: transform 1s ease;
   border-radius: 10px;

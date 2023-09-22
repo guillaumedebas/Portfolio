@@ -54,7 +54,7 @@
     &__subtitle {
         font-size: calc(clamp(5rem, 11.111vw, 10rem) / 6.66);
         opacity: 0;
-        transform: translateX(30rem);
+        transform: translateX(5rem);
         animation: fadeInRight 2s cubic-bezier(0.4, 0.45, 0, 2.13)3.5s forwards;
         letter-spacing: .15em;
         text-align: center;
