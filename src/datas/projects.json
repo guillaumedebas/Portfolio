@@ -2,7 +2,7 @@
 	{
 		"id": "cgfgdvxa7",
 		"title": "Mon Vieux Grimoire - Notation de livres",
-		"cover": "./projects/mvg/mvg-01.webp",
+		"cover": "./projects/mvg/mvg-cover.webp",
 		"pictures": [
 			"./projects/mvg/mvg-01.webp",
 			"./projects/mvg/mvg-02.webp",
@@ -25,7 +25,7 @@
 	{
 		"id": "cvx7vxca7",
 		"title": "Kasa - Location immobière",
-		"cover": "./projects/kasa/kasa-01.webp",
+		"cover": "./projects/kasa/kasa-cover.webp",
 		"pictures": [
 			"./projects/kasa/kasa-01.webp",
 			"./projects/kasa/kasa-02.webp",
@@ -48,7 +48,7 @@
 	{
 		"id": "cbfgdfsfxvb",
 		"title": "Nina Carducci - Photographe",
-		"cover": "./projects/nina/nina-01.webp",
+		"cover": "./projects/nina/nina-cover.webp",
 		"pictures": [
 			"./projects/nina/nina-01.webp",
 			"./projects/nina/nina-02.webp",
