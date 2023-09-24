@@ -4,5 +4,6 @@
 
   &__logo {
     width: clamp(1.5rem, 2.5vw ,3rem);
+    aspect-ratio: 1/1;
   }
 }

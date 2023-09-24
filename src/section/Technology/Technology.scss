@@ -7,7 +7,7 @@
   align-items: center;
   padding: 25px;
   gap: 1rem;
-
+  
   &__title {
     font-size: calc(clamp(5rem, 11.111vw, 10rem) / 4.44);
 
@@ -53,6 +53,7 @@
 
       &__img {
         width: 100%;
+        aspect-ratio: auto 640/360;
       }
     }
   }
