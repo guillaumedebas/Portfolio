@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import mail from "../../assets/icons/mail.svg";
 import './Contact.scss';
 
 export default function Contact() {
@@ -79,8 +79,7 @@ export default function Contact() {
         <p className="contact__message__content">
           Contactez-moi via ce formulaire
         </p>
-   
-
+        <img src={mail} alt="animation email" className='contact__message__mail'/>
 
         {showNotification && (
           <div className={`notification ${notificationType} ${isOpen ? " open" : ""}`}>
@@ -96,6 +95,7 @@ export default function Contact() {
         )}
 
       </div>
+    
 
       <form className="contact__main__form" onSubmit={handleSubmit}>
         <div className="contact__main__form__identity">

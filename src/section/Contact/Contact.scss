@@ -18,6 +18,7 @@
     gap: 10px;
     width: 100%;
     padding-right: 20px;
+   
 
     &__title {
       font-size: calc(clamp(5rem, 11.111vw, 10rem) / 4.44);
@@ -26,6 +27,19 @@
 
     &__content {
       font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+    }
+
+    &__mail {
+      margin-top: 3rem;
+      width: 40%;
+      align-self: center;
+      justify-self: center;
+      animation: beat 3s infinite alternate;
+      transform-origin: center;
+
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
   }
 
@@ -210,5 +224,11 @@
 @keyframes spin {
   100% {
     transform: rotate(360deg)
+  }
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.4);
   }
 }
