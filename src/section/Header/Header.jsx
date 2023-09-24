@@ -38,6 +38,21 @@ function Header() {
     }
   }
 
+  const hideMenu = () => {
+    const menuElement = document.querySelector('.menu');
+    if (menuElement) {
+      menuElement.classList.add('no-display');
+    }
+   
+    setTimeout(() => {
+      toggleMenu()
+      setTimeout(() => {
+        menuElement.classList.remove('no-display')
+      }, 1000)
+
+    }, 1000)
+  };
+
 
   return (
     <header>
@@ -46,7 +61,7 @@ function Header() {
           <Photo />
         </a>
         <ul className="menu--desktop">
-          <li key="link1"><a href="#about">À propos<span className="underline-effect"></span></a></li>
+          <li key="link1" ><a href="#about">À propos<span className="underline-effect"></span></a></li>
           <li key="link2"><a href="#technology">Technologies<span className="underline-effect"></span></a></li>
           <li key="link3"><a href="#project">Projets<span className="underline-effect"></span></a></li>
           <li key="link4"><a href="#contact">Contact<span className="underline-effect"></span></a></li>
@@ -57,15 +72,15 @@ function Header() {
       </nav>
 
       {isMenuOpen && (
-    
-          <div className="menu">
-            <ul className={`${isActiveMenu ? "active" : ""}`}>
-              <li key="link1"><a href="#about">À propos</a></li>
-              <li key="link2"><a href="#technology">Technologies</a></li>
-              <li key="link3"><a href="#project">Projets</a></li>
-              <li key="link4"><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
+
+        <div className="menu">
+          <ul className={`${isActiveMenu ? "active" : ""}`}>
+            <li key="link1" ><a href="#about" onClick={hideMenu}>À propos</a></li>
+            <li key="link2" ><a href="#technology" onClick={hideMenu}>Technologies</a></li>
+            <li key="link3" ><a href="#project" onClick={hideMenu}>Projets</a></li>
+            <li key="link4" ><a href="#contact" onClick={hideMenu}>Contact</a></li>
+          </ul>
+        </div>
 
       )}
     </header>
