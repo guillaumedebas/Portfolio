@@ -11,7 +11,7 @@ import "./Project.scss"
 function Project() {
   return (
     <section className="project-section">
-     <h2 className="project-section__title" id="project">
+     <h2 className="project-section__title"><span className="floating-link" id="project"></span>
         Projets
       </h2>
       <p className="project-section__text">Cliquez sur les projets pour les découvrir en détail&nbsp;:</p>

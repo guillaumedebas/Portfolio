@@ -75,7 +75,7 @@ export default function Contact() {
   return (
     <section className="contact">
       <div className="contact__message">
-        <h2 className="contact__message__title" id="contact">Contact</h2>
+        <h2 className="contact__message__title">Contact</h2><span className="floating-link" id="contact"></span>
         <p className="contact__message__content">
           Contactez-moi via ce formulaire
         </p>

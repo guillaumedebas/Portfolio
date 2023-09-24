@@ -9,7 +9,7 @@ import cv from "../../assets/pdf/guillaume_debas_cv.pdf"
 function About() {
   return (
     <section className="about">
-      <h2 className="about__title" id="about">
+      <h2 className="about__title"><span className="floating-link" id="about"></span>
         À propos
       </h2>
       <p className="about__content">

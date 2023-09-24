@@ -14,7 +14,7 @@ import expressjs from "../../assets/logos/expressjs_logo.webp"
 
 function Technology() {
   return (
-    <section className="technology" id="technology">
+    <section className="technology"><span className="floating-link" id="technology"></span>
       <h2 className="technology__title">
         Technologies
       </h2>
