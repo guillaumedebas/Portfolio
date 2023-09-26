@@ -22,7 +22,7 @@ function ProjectItem({ project }) {
       <p className="project__btn__title">{project.title}</p>
       <img className="project__btn__background" src={project.cover} alt={`Illustration du projet :${project.title}`}   />
     </button>
-     {openModal && <Modal setOpenModal={setOpenModal} project={project} />}
+     {openModal && <Modal setOpenModal={setOpenModal}  project={project} contentType="project"/>}
      </div>
   )
 }

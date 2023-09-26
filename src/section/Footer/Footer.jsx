@@ -1,3 +1,4 @@
+import LegalInformation from "../../components/LegalInformation/LegalInformation"
 import Social from "../../components/Social/Social"
 import "./Footer.scss"
 
@@ -10,7 +11,8 @@ function Footer() {
   return (
     <footer className="footer">
      <p className="footer__text">Réalisé par Guillaume Debas</p>
-     <Social networksToShow={['github', 'linkedin']} /> 
+     <Social networksToShow={['linkedin']} /> 
+     <LegalInformation />
     </footer>
   )
 }

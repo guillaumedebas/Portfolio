@@ -1,0 +1,11 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+
+button {
+    border: none;
+    background: none;
+    color: $element-color;
+    font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+    cursor: pointer;
+}

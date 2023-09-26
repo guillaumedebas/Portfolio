@@ -1,0 +1,49 @@
+@import '../../../../utils/variables';
+@import '../../../../utils/mixins';
+
+.modal {
+    &__content {
+        &--Legal-Information {
+            &__header {
+                &__title {
+                    font-size: 2rem;
+                    font-weight: 800;
+                    text-align: center;
+                }
+            }
+
+            &__body {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 40px;
+               
+               
+
+                & p {
+                    font-size: clamp(0.75rem, 1.25vw, 1rem);
+                   text-align: justify;
+                }
+
+                & h4, h5 {
+                    margin-top: 5px;
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    color: $object-color;
+                }
+
+                & h5 {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+
+                & a {
+                    text-decoration: none;
+                    color: $element-color;
+                }
+
+            }
+        }
+    }
+
+}
