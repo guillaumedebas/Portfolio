@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import mail from "../../assets/icons/mail.svg";
 import './Contact.scss';
+import Notification from '../../components/Notification/Notification';
 
 export default function Contact() {
   const [FirstName, setFirstName] = useState('');
@@ -12,7 +13,12 @@ export default function Contact() {
   const [notificationType, setNotificationType] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+
+  const closeNotification = () => {
+    setShowNotification(false);
+    setNotificationMessage('');
+    setNotificationType('');
+  };
 
   const onSuccess = message => {
     setNotificationMessage(message);
@@ -27,19 +33,9 @@ export default function Contact() {
   useEffect(() => {
     if (notificationMessage && notificationType === 'success') {
       setShowNotification(true);
-      setTimeout(() => {
-        setIsOpen(true);
-      }, 500);
-      const timer = setTimeout(() => {
-        setIsOpen(false);
-        setTimeout(() => {
-          setShowNotification(false);
-          setNotificationMessage('');
-          setNotificationType('');
-        }, 500);
-      }, 3500);
+      const timer = setTimeout(closeNotification, 3500);
 
-      return () => clearTimeout(timer); // Clear the timer if the component unmounts
+      return () => clearTimeout(timer)
     }
   }, [notificationMessage, notificationType]);
 
@@ -75,27 +71,19 @@ export default function Contact() {
   return (
     <section className="contact">
       <div className="contact__message">
-        <h2 className="contact__message__title">Contact</h2><span className="floating-link" id="contact"></span>
-        <p className="contact__message__content">
-          Contactez-moi via ce formulaire
-        </p>
+        <h2 className="contact__message__title">Contact</h2>
+        <span className="floating-link" id="contact"></span>
+        <p className="contact__message__content">Contactez-moi via ce formulaire</p>
         <img src={mail} alt="animation email" className='contact__message__mail'/>
 
         {showNotification && (
-          <div className={`notification ${notificationType} ${isOpen ? " open" : ""}`}>
-            <button
-              className="notification__close"
-              aria-label="Fermer la notification"
-              onClick={() => setShowNotification(false)}
-            >
-              Fermer la notification
-            </button>
-            <p className='notification__message'>{notificationMessage}</p>
-          </div>
+          <Notification
+            message={notificationMessage}
+            type={notificationType}
+            onClose={closeNotification}
+          />
         )}
-
       </div>
-    
 
       <form className="contact__main__form" onSubmit={handleSubmit}>
         <div className="contact__main__form__identity">
@@ -194,7 +182,6 @@ export default function Contact() {
           {isLoading ? <span className="spinner"></span> : 'Envoyer mon message'}
         </button>
       </form>
-
     </section>
   );
 }
