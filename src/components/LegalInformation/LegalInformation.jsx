@@ -15,16 +15,15 @@ import LegalInformationContent from "../../modalContent/LegalInformationContent/
  */
 function LegalInformation() {
   const [openModal, setOpenModal] = useState(false)
-  const testOpen = () => {
+  const OpenModalClick = () => {
     setOpenModal(true)
-    console.log('ok')
   };
 
 
 
   return (
     <div className="pp">
-      <button className="ppproject__btn" onClick={testOpen}
+      <button className="ppproject__btn" onClick={OpenModalClick}
     >
      Mentions Légales
     </button>

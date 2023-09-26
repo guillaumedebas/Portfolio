@@ -46,7 +46,6 @@ export default function Contact() {
     const formDatab = new FormData(formEle);
 
     try {
-      //loader
       await fetch(
         'https://script.google.com/macros/s/AKfycbyj7qHrSaal3RY6aYJi9-OVodmJy5N9dqzoM5igXaBOahhLYadojnxX4MtQs_GTpuJrZw/exec',
         {
@@ -54,7 +53,6 @@ export default function Contact() {
           body: formDatab,
         }
       );
-      //retirer loader
       onSuccess('Message envoyé avec succès');
       setFirstName('');
       setLastName('');

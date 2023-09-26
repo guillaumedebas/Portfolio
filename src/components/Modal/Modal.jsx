@@ -9,9 +9,22 @@ function Modal({ setOpenModal, children }) {
 
   const handleKeyDown = (e) => {
     if (e.key === "Escape") {
-      closeModal();
+      setOpenModal(false);
+    } else if (e.key === "Tab") {
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusableRef.current) {
+          e.preventDefault();
+          lastFocusableRef.current.focus();
+        }
+      } else {
+        if (document.activeElement === lastFocusableRef.current) {
+          e.preventDefault();
+          firstFocusableRef.current.focus();
+        }
+      }
     }
   };
+
 
   const closeModal = () => {
     setIsOpen(false);
