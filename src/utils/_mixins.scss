@@ -4,6 +4,7 @@
     display: flex;
     background-color: $background-color;
     border-radius: 10px;
+    padding: clamp(20px, 2.604vw,50px);
 }
 
 @mixin color-hover {

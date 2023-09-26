@@ -3,7 +3,6 @@
 
 .contact {
   @include section-box;
-  padding: 50px;
   gap: 30px;
 
   @media screen and (max-width: 768px) {
