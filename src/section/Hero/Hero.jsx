@@ -8,7 +8,7 @@ import Photo from "../../components/Photo/Photo"
 
 function Hero() {
   return (
-    <section className="hero">
+    <section className="hero"><span className="floating-link" id="start"></span>
      <h1 className="hero__name">
       Guillaume Debas,
       </h1>

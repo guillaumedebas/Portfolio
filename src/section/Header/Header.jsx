@@ -57,7 +57,7 @@ function Header() {
   return (
     <header>
       <nav className="navbar">
-        <a href="#" className="navbar__avatar">
+        <a href="#start" className="navbar__avatar">
           <Photo />
         </a>
         <ul className="menu--desktop">
