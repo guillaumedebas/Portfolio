@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Modal.scss";
-import ProjectContent from "./content/ProjectContent/ProjectContent";
-import LegalInformation from "./content/LegalInformationContent/LegalInformation";
 
-function Modal({ setOpenModal, project, contentType }) {
+function Modal({ setOpenModal, children }) {
   const modalRef = useRef(null);
   const firstFocusableRef = useRef(null);
   const lastFocusableRef = useRef(null);
@@ -76,7 +74,7 @@ function Modal({ setOpenModal, project, contentType }) {
       ref={modalRef}
     >
       <div
-        className={`modal__content${isOpen ? " open" : ""}`} // Appliquer la classe fadeOut à modal__content
+        className={`modal__content${isOpen ? " open" : ""}`}
         onClick={handlePropagation}
       >
         <button
@@ -86,11 +84,9 @@ function Modal({ setOpenModal, project, contentType }) {
         >
           Fermer la modale
         </button>
-        {contentType === "project" ? (
-        <ProjectContent project={project} />
-      ) : contentType === "LegalInformation" ? (
-        <LegalInformation />
-      ) : null}
+
+        {children}
+  
       </div>
     </dialog>
   )

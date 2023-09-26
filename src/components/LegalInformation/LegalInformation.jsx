@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Modal from "../Modal/Modal"
 import "./LegalInformation.scss"
+import LegalInformationContent from "../../modalContent/LegalInformationContent/LegalInformationContenrt"
 
 
 /**
@@ -27,7 +28,7 @@ function LegalInformation() {
     >
      Mentions Légales
     </button>
-     {openModal && <Modal setOpenModal={setOpenModal}  contentType="LegalInformation"/>}
+     {openModal && <Modal setOpenModal={setOpenModal}  ><LegalInformationContent /> </Modal>}
      </div>
   )
 }

@@ -7,7 +7,7 @@ header {
 
 .navbar {
   display: flex;
-  background-color: rgba(45, 45, 45, 0.99);
+  background-color: $background-on-top-color;
   gap: clamp(26px, 3.958vw, 57px);
   position: fixed;
   top: 0;
@@ -125,7 +125,7 @@ header {
 .menu ul {
   margin: 0;
   padding: 0;
-  background-color: rgba(45, 45, 45, 0.99);
+  background-color: $background-on-top-color;
   transform: translateY(-100%);
   transition: transform 1s ease;
   border-radius: 10px;

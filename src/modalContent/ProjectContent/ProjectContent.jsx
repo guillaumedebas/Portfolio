@@ -1,6 +1,6 @@
 import "./ProjectContent.scss";
-import BannerGallery from "../../../BannerGallery/BannerGallery";
-import TagList from "../../../TagList/TagList";
+import BannerGallery from "../../components/BannerGallery/BannerGallery"
+import TagList from "../../components/TagList/TagList";
 
 function ProjectContent({ project }) {
   
