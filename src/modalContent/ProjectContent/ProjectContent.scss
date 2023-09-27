@@ -46,21 +46,21 @@
 
                     &__label {
                         font-weight: 800;
-                        font-size: clamp(0.625rem, 0.972vw, 0.875rem);
+                        font-size: $project-font-size;
                         margin-bottom: 0.5rem;
-                        color: rgb(0, 100, 255);
+                        color: $object-color;
 
 
                     }
 
                     &__content {
                         text-align: justify;
-                        font-size: clamp(0.625rem, 0.972vw, 0.875rem);
+                        font-size: $project-font-size;
                         margin-bottom: 1.5rem;
                         line-height: 1.5rem;
                         font-weight: 400;
                         list-style-type: disc;
-                        color: white;
+                        color: $element-color;
                         text-align: justify;
 
                         & li {

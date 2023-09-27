@@ -1,3 +1,4 @@
+@import '../../utils/variables';
 @import '../../utils/mixins';
 
 .about {
@@ -13,7 +14,7 @@
   }
 
    &__content {
-      font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+      font-size: $p-font-size;
       text-align: left;
       max-width: 135ch;
   }
@@ -26,8 +27,8 @@
     color: $element-color;
     text-decoration: none;
     border: none;
-    border-radius: 10px;
-    font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+    border-radius: $border-radius-size;
+    font-size: $p-font-size;
     cursor: pointer;
     box-sizing: border-box;
     outline: none;

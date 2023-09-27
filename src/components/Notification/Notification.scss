@@ -14,7 +14,7 @@
   max-width: 350px;
   min-width: 250px;
   aspect-ratio: 16/3;
-  border-radius: 10px;
+  border-radius: $border-radius-size;
   color: $element-color;
   background-color: $background-on-top-color;
   opacity: 0;
@@ -50,7 +50,7 @@
   &__message {
     font-weight: 800;
     margin: 1%;
-    font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+    font-size: $p-font-size;
     align-self: center;
     text-align: center;
   }

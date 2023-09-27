@@ -16,7 +16,6 @@
         overflow: hidden; /* Ensures the content is not revealed until the animation */
         border-right: .15em solid $element-color; /* The typwriter cursor */
         white-space: nowrap; /* Keeps the content on a single line */
-        /* Adjust as needed */
         animation: 
         typing 1.5s steps(16, end),
           blink-caret .7s step-end forwards;

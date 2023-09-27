@@ -24,11 +24,9 @@
 
 
     &__content {
-        // margin-right: clamp(0px, 6.944vw, 400px);
-        // margin-left: clamp(0px, 6.944vw, 400px);
         max-width: 1400px;
         max-height: 99vh;
-        border-radius: 12px;
+        border-radius: $border-radius-size;
         background-color: $background-on-top-color;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         display: flex;

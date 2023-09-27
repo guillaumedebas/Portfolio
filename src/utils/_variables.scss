@@ -3,3 +3,8 @@ $background-on-top-color: rgba(45, 45, 45, 0.99);
 $element-color: #ffffff;
 $object-color: #0064ff;
 $hover-color:  #002670;
+$border-radius-size: 10px;
+
+$p-font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+$project-font-size: clamp(0.625rem, 0.972vw, 0.875rem);
+$template-font-size: clamp(5rem, 11.111vw, 10rem);

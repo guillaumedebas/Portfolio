@@ -1,3 +1,5 @@
+@import '../../utils/variables';
+
 .tag-list {
     display: flex;
     flex-wrap: wrap;
@@ -9,8 +11,8 @@
         align-items: center;
         background-color: black;
         padding: 5px 15px;
-        color: white;
+        color: $element-color;
         font-size: clamp(0.625rem, 0.972vw, 0.875rem);
-        border-radius: 10px;
+        border-radius: $border-radius-size;
     }
 }

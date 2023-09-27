@@ -6,6 +6,6 @@ button {
     border: none;
     background: none;
     color: $element-color;
-    font-size: clamp(0.75rem, 1.25vw, 1.125rem);
+    font-size: $p-font-size;
     cursor: pointer;
 }

@@ -1,10 +1,12 @@
+@import '../../utils/variables';
+
 .project-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: calc((clamp(0px, 6.944vw, 100px)) * 0.6);
     grid-row-gap: calc((clamp(0px, 6.944vw, 100px)) * 0.5);
     padding: calc((clamp(0px, 6.944vw, 100px)) * 0.5);
-    border-radius: 25px;
+    border-radius: $border-radius-size;
     position: relative;
     width: 100%;
 

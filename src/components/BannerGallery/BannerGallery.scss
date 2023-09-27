@@ -1,3 +1,7 @@
+@import '../../utils/variables';
+@import '../../utils/mixins';
+
+
 .gallery {
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -5,12 +9,11 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  border-radius: 25px;
+  border-radius: $border-radius-size;
 
 
   @media screen and (max-width: 480px) {
     aspect-ratio: 335 / 255;
-    border-radius: 10px;
   }
 
   &.banner {
@@ -36,9 +39,8 @@
   }
 
   &__title {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: calc((clamp(5rem, 11.111vw, 10rem)) / 3.33);
+    color: $object-color;
+    font-size: calc(($template-font-size) / 3.33);
     position: absolute;
     z-index: 30;
     text-align: center;
@@ -53,7 +55,7 @@
 
   &__container {
     position: relative;
-    border-radius: 25px;
+    border-radius: $border-radius-size;
     width: 100%;
     height: 100%;
     display: flex;
@@ -107,14 +109,11 @@
     right: 0;
     text-align: center;
     display: block;
-    color: white;
-    font-size: clamp(0.875rem, 1.25vw, 1.125rem);
-    font-family: Montserrat;
+    color: $object-color;
+    font-size: $p-font-size;
     font-weight: 500;
     z-index: 3;
-    display: none;
-
-
+    
     @media screen and (max-width: 480px) {
       display: none;
     }
