@@ -4,13 +4,13 @@ import "./BannerGallery.scss"
 /**
  * Component for the banner gallery.
  *
- * Props:
- * - pictures: an array of image URLs to display.
- * - slogan: the text of the slogan to display.
- * - banner: a boolean indicating if the gallery is used as a banner.
+ * @param {Array} pictures - An array of image URLs to display.
+ * @param {string} slogan - The text of the slogan to display.
+ * @param {boolean} banner - A boolean indicating if the gallery is used as a banner.
  */
 
 const BannerGallery = ({ pictures, slogan, banner }) => {
+    // State variable to keep track of the currently displayed image
   const [currentItem, setCurrentItem] = useState(0)
 
   // Function to move to the next image

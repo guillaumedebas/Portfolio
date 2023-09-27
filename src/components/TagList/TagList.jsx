@@ -1,11 +1,9 @@
 import "./TagList.scss"
 
 /**
- * TagList component.
- * Displays a list of tags for a specific rental sheet.
+ * TagList component for displaying a list of tags for a specific rental sheet.
  *
- * Props:
- * - sheet: the index of the rental sheet to display tags from.
+ * @param {Array} tags - An array of tags to display in the list.
  */
 
 function TagList({ tags }) {

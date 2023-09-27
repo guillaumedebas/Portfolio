@@ -3,6 +3,12 @@ import mail from "../../assets/icons/mail.svg";
 import './Contact.scss';
 import Notification from '../../components/Notification/Notification';
 
+/**
+ * Contact component for a contact form.
+ *
+ * This component allows users to submit messages via a contact form and displays notifications.
+ */
+
 export default function Contact() {
   const [FirstName, setFirstName] = useState('');
   const [LastName, setLastName] = useState('');
@@ -14,22 +20,27 @@ export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
 
+  // Function to close the notification message
   const closeNotification = () => {
     setShowNotification(false);
     setNotificationMessage('');
     setNotificationType('');
   };
 
+
+  // Function to display a success notification message
   const onSuccess = message => {
     setNotificationMessage(message);
     setNotificationType('success');
   };
 
+  // Function to display an error notification message
   const onError = message => {
     setNotificationMessage(message);
     setNotificationType('error');
   };
 
+  // Effect to handle the display of notification messages and auto-dismiss success messages
   useEffect(() => {
     if (notificationMessage && notificationType === 'success') {
       setShowNotification(true);
@@ -39,12 +50,14 @@ export default function Contact() {
     }
   }, [notificationMessage, notificationType]);
 
+// Function to handle form submission
   const handleSubmit = async e => {
     e.preventDefault();
     setIsLoading(true);
     const formEle = document.querySelector('form');
     const formDatab = new FormData(formEle);
 
+        // Send a POST request with the form data
     try {
       await fetch(
         'https://script.google.com/macros/s/AKfycbyj7qHrSaal3RY6aYJi9-OVodmJy5N9dqzoM5igXaBOahhLYadojnxX4MtQs_GTpuJrZw/exec',

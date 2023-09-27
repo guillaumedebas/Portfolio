@@ -4,6 +4,11 @@ import Photo from "../../components/Photo/Photo";
 import React from 'react';
 import NavigationMenu from "../../components/NavigationMenu/NavigationMenu";
 
+/**
+ * Header component.
+ * Displays the header section of the website.
+ */
+
 function Header() {
   return (
     <header>

@@ -3,8 +3,9 @@ import githubLogo from "../../assets/logos/github-logo.svg";
 import linkedinLogo from "../../assets/logos/linkedin-logo.svg";
 
 /**
- * Social component.
- * Displays Social elements.
+ * Social component for displaying social network links.
+ *
+ * @param {Array} networksToShow - An array of social networks to display, e.g., ['github', 'linkedin'].
  */
 
 function Social({ networksToShow }) {

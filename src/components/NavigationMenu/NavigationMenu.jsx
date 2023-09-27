@@ -1,12 +1,18 @@
 import "./NavigationMenu.scss"
 import React, { useState } from 'react';
 
+/**
+ * Component for a navigation menu with mobile toggle functionality.
+ */
+
 function NavigationMenu() {
+  // State variables to control menu visibility and animation
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuOpenIcon, setIsMenuOpenIcon] = useState(false);
   const [isActive, setIsActive] = useState(true);
   const [isActiveMenu, setIsActiveMenu] = useState(true);
 
+   // Function to toggle the menu's open/close state
   const toggleMenu = () => {
     setIsActiveMenu(false);
     setIsActive(false);
@@ -30,6 +36,7 @@ function NavigationMenu() {
     }
   };
 
+    // Function to hide the menu (on mobile devices)
   const hideMenu = () => {
     const menuElement = document.querySelector('.menu');
     if (menuElement) {

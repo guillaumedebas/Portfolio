@@ -2,6 +2,12 @@ import "./ProjectContent.scss";
 import BannerGallery from "../../components/BannerGallery/BannerGallery"
 import TagList from "../../components/TagList/TagList";
 
+/**
+ * Component for displaying detailed project content.
+ *
+ * @param {Object} project - The project data to be displayed.
+ */
+
 function ProjectContent({ project }) {
   
 

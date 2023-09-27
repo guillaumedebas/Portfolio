@@ -2,8 +2,8 @@ import "./Hero.scss"
 import Photo from "../../components/Photo/Photo"
 
 /**
- * About component.
- * Displays the about section of the website.
+ * Hero component.
+ * Displays the hero section of the website.
  */
 
 function Hero() {

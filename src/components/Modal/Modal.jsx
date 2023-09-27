@@ -1,12 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Modal.scss";
 
+/**
+ * Component for a modal dialog.
+ *
+ * @param {Function} setOpenModal - A function to control the visibility of the modal.
+ * @param {ReactNode} children - The content to be displayed inside the modal.
+ */
+
 function Modal({ setOpenModal, children }) {
+    // Refs for DOM elements and state management
   const modalRef = useRef(null);
   const firstFocusableRef = useRef(null);
   const lastFocusableRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
+   // Function to handle keyboard events (Escape key and Tab key)
   const handleKeyDown = (e) => {
     if (e.key === "Escape") {
       setOpenModal(false);
@@ -25,7 +34,7 @@ function Modal({ setOpenModal, children }) {
     }
   };
 
-
+  // Function to close the modal with a fade-out effect
   const closeModal = () => {
     setIsOpen(false);
     setTimeout(() => {
@@ -33,10 +42,13 @@ function Modal({ setOpenModal, children }) {
     }, 501);
   };
 
+
+  // Function to stop event propagation to prevent clicks within the modal from closing it
   const handlePropagation = (e) => {
     e.stopPropagation();
   };
 
+  // Effect to set up initial focus and disable scrolling on the body
   useEffect(() => {
     const focusableElements = modalRef.current.querySelectorAll(
       "button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])"
@@ -61,7 +73,7 @@ function Modal({ setOpenModal, children }) {
   }, []);
 
 
-
+ // Effect to add and remove event listeners for keyboard interactions
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDown);
 
@@ -70,6 +82,7 @@ function Modal({ setOpenModal, children }) {
     };
   }, []);
 
+    // Effect to set focusable elements when the modal content changes
   useEffect(() => {
     const focusableElements = modalRef.current.querySelectorAll(
       "button, [href], input, select, textarea, [tabindex]:not([tabindex='-1'])"

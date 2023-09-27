@@ -5,14 +5,9 @@ import LegalInformationContent from "../../modalContent/LegalInformationContent/
 
 
 /**
- * ProjectItem component.
- * Displays a project item with title, cover image, and a link to the project sheet.
- *
- * Props:
- * - title: the title of the project item.
- * - cover: the URL of the cover image for the project item.
- * - id: the unique identifier of the project item.
- */
+ * LegalInformation component.
+ * Displays a button to access at the Legal Information.
+ **/
 function LegalInformation() {
   const [openModal, setOpenModal] = useState(false)
   const OpenModalClick = () => {
@@ -22,8 +17,8 @@ function LegalInformation() {
 
 
   return (
-    <div className="pp">
-      <button className="ppproject__btn" onClick={OpenModalClick}
+    <div className="legal-information">
+      <button className="legal-information__btn" onClick={OpenModalClick}
     >
      Mentions Légales
     </button>
