@@ -1,5 +1,8 @@
 import "./LegalInformationContent.scss";
 
+/**
+ * Component for displaying legal information content (in the modal).
+ */
 
 function LegalInformationContent() {
 
