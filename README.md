@@ -205,7 +205,7 @@ yarn dev
 
 ## ☁️ Deploy
 
-[Portfolio - Guillaume Debas]((https://guillaume-debas.com/))
+[Portfolio - Guillaume Debas](https://guillaume-debas.com/)
 
 ## 📄 License
 
