@@ -122,7 +122,7 @@ Portfolio project uses astrojs/react, types/react, types/react-dom, astro, react
     ├── env.d.ts
     ├── modalContent
     │   ├── LegalInformationContent
-    │   │   ├── LegalInformationContenrt.jsx
+    │   │   ├── LegalInformationContent.jsx
     │   │   └── LegalInformationContent.scss
     │   └── ProjectContent
     │       ├── ProjectContent.jsx
