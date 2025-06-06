@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import mail from "../../assets/icons/mail.svg";
 import './Contact.scss';
 import Notification from '../../components/Notification/Notification';
@@ -19,6 +19,7 @@ export default function Contact() {
   const [notificationType, setNotificationType] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
+  const timerRef = useRef(null);
 
   // Function to close the notification message
   const closeNotification = () => {
@@ -40,15 +41,29 @@ export default function Contact() {
     setNotificationType('error');
   };
 
-  // Effect to handle the display of notification messages and auto-dismiss success messages
+  // Effect to handle the display of notification messages
   useEffect(() => {
-    if (notificationMessage && notificationType === 'success') {
+    if (notificationMessage) {
       setShowNotification(true);
-      const timer = setTimeout(closeNotification, 3500);
 
-      return () => clearTimeout(timer)
+      // Clear any existing timer to avoid duplicates
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+
+      timerRef.current = setTimeout(() => {
+        closeNotification();
+        timerRef.current = null;
+      }, 3500);
+
+      return () => {
+        if (timerRef.current) {
+          clearTimeout(timerRef.current);
+          timerRef.current = null;
+        }
+      };
     }
-  }, [notificationMessage, notificationType]);
+  }, [notificationMessage]);
 
 // Function to handle form submission
   const handleSubmit = async e => {
