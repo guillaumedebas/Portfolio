@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Modal from "../Modal/Modal"
 import "./LegalInformation.scss"
-import LegalInformationContent from "../../modalContent/LegalInformationContent/LegalInformationContenrt"
+import LegalInformationContent from "../../modalContent/LegalInformationContent/LegalInformationContent"
 
 
 /**
